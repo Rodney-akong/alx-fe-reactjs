@@ -9,7 +9,7 @@ function Footer() {
         marginTop: '20px'
       }}
     >
-      <p>© 2025 My React App</p>
+      <p>© 2023 City Lovers</p>
     </footer>
   );
 }

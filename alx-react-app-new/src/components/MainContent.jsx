@@ -8,7 +8,7 @@ function MainContent() {
       }}
     >
       <p style={{ fontSize: '18px' }}>
-        I love visiting different cities around the world.
+        I love to visit New York, Paris, and Tokyo.
       </p>
     </main>
   );
