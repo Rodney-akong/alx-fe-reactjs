@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useRecipeStore } from './recipeStore'
-import EditRecipeForm from '../store/EditRecipeForm'
+import EditRecipeForm from './EditRecipeForm'
 import DeleteRecipeButton from './DeleteRecipeButton'
 
 const RecipeDetails = () => {
