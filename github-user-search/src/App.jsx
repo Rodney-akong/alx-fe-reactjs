@@ -2,9 +2,9 @@ import React from "react";
 
 function App() {
   return (
-    <div>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>GitHub User Search App</h1>
-      <p>Project setup complete. Ready to build!</p>
+      <p>Setup complete. Ready to build search feature.</p>
     </div>
   );
 }
