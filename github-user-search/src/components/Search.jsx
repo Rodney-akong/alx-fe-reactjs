@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { searchUsersAdvanced } from "../services/githubService";
+import { fetchUserData, searchUsersAdvanced } from "../services/githubService";
 
 function Search() {
   const [username, setUsername] = useState("");
@@ -18,6 +18,7 @@ function Search() {
     setPage(1);
 
     try {
+      // Use advanced search for the actual functionality
       const data = await searchUsersAdvanced(username, location, minRepos, 1);
       setUsers(data.items || []);
       setHasMore(data.items.length > 0);
@@ -81,7 +82,17 @@ function Search() {
 
       <div style={{ marginTop: "1rem" }}>
         {users.map((user) => (
-          <div key={user.id} style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "0.5rem", border: "1px solid #ccc", marginBottom: "0.5rem" }}>
+          <div
+            key={user.id}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
+              padding: "0.5rem",
+              border: "1px solid #ccc",
+              marginBottom: "0.5rem",
+            }}
+          >
             <img src={user.avatar_url} alt={user.login} style={{ width: "50px", borderRadius: "50%" }} />
             <div>
               <p style={{ fontWeight: "bold" }}>{user.login}</p>
