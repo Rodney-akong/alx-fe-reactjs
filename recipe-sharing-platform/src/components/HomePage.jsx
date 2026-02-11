@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";   // 👉 NEW IMPORT
 import recipes from "../data.json";
 
 const HomePage = () => {
@@ -14,7 +15,6 @@ const HomePage = () => {
         Recipe Sharing Platform
       </h1>
 
-      {/* ✅ FIXED GRID — includes sm */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {recipeList.map((recipe) => (
           <div
@@ -35,9 +35,13 @@ const HomePage = () => {
               {recipe.summary}
             </p>
 
-            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            {/* ✅ THIS IS STEP 4 — COPY EXACTLY */}
+            <Link
+              to={`/recipe/${recipe.id}`}
+              className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            >
               View Recipe
-            </button>
+            </Link>
           </div>
         ))}
       </div>

@@ -18,3 +18,43 @@
     "image": "https://via.placeholder.com/300"
   }
 ]
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish.",
+    "image": "https://via.placeholder.com/400",
+    "ingredients": [
+      "Spaghetti",
+      "Eggs",
+      "Parmesan cheese",
+      "Bacon",
+      "Black pepper"
+    ],
+    "steps": [
+      "Boil pasta",
+      "Fry bacon",
+      "Mix eggs and cheese",
+      "Combine everything together"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Creamy tomato-based chicken curry.",
+    "image": "https://via.placeholder.com/400",
+    "ingredients": [
+      "Chicken",
+      "Tomatoes",
+      "Cream",
+      "Spices",
+      "Garlic"
+    ],
+    "steps": [
+      "Grill chicken",
+      "Prepare sauce",
+      "Mix chicken with sauce",
+      "Simmer and serve"
+    ]
+  }
+]
