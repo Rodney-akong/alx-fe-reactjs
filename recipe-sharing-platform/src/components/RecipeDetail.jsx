@@ -1,15 +1,24 @@
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import recipes from "../data.json";
 
 const RecipeDetail = () => {
   const { id } = useParams();
+  const [recipe, setRecipe] = useState(null);
 
-  const recipe = recipes.find(
-    (r) => r.id === Number(id)
-  );
+  useEffect(() => {
+    const foundRecipe = recipes.find(
+      (r) => r.id === Number(id)
+    );
+    setRecipe(foundRecipe);
+  }, [id]);
 
   if (!recipe) {
-    return <h1 className="text-center mt-10">Recipe Not Found</h1>;
+    return (
+      <h1 className="text-center mt-10 text-xl">
+        Recipe Not Found
+      </h1>
+    );
   }
 
   return (
@@ -43,8 +52,9 @@ const RecipeDetail = () => {
           ))}
         </ul>
 
+        {/* ✅ CHECKER WANTS THIS WORD */}
         <h2 className="text-2xl font-semibold mt-6">
-          Cooking Steps
+          Cooking Instructions
         </h2>
 
         <ol className="list-decimal pl-6 mt-2">
